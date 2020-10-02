@@ -1,0 +1,66 @@
+apply plugin: 'com.android.library'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion rootProject.compile_sdk_version
+    buildToolsVersion rootProject.build_tool_version
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.min_sdk_version
+        targetSdkVersion rootProject.ext.target_sdk_version
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    // Enable data binding in your Android project gradle
+    buildFeatures {
+        dataBinding = true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    /**
+     *          ANDROID/KOTLIN BASICS
+     */
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation "androidx.core:core-ktx:$androidx_core_ktx_version"
+    implementation "androidx.appcompat:appcompat:$androidx_appcompat_version"
+    kapt "androidx.databinding:databinding-compiler:$build_gradle_version"
+
+    /**
+     *          ANDROID UI EXTRAS
+     */
+    implementation "androidx.recyclerview:recyclerview:$androidx_recyclerview_version"
+    implementation "androidx.cardview:cardview:$androidx_cardview_version"
+    implementation "androidx.lifecycle:lifecycle-extensions:$androidx_lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$androidx_lifecycle_version"
+    implementation "androidx.constraintlayout:constraintlayout:$androidx_contraintlayout_version"
+    // this is needed for Android Q: https://stackoverflow.com/questions/58145382/android-10-q-transition-shared-element-view-in-fragment-with-recyclerview-is-b
+    implementation "androidx.transition:transition:$transition_version"
+    implementation "androidx.coordinatorlayout:coordinatorlayout:$coordinatorlayout"
+
+}
