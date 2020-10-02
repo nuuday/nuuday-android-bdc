@@ -1,10 +1,11 @@
-package nuuday.android.sample
+package nuuday.android.sample.activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import music.core.composition.activities.BehaviorDrivenAppCompatActivity
+import nuuday.android.sample.R
 import nuuday.android.sample.main.MainFragment
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BehaviorDrivenAppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

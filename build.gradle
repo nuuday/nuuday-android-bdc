@@ -54,6 +54,10 @@ buildscript {
          */
         gradle_dependencies_versions = "0.29.0"
 
+        /**
+         *          LOGGING
+         */
+        timber_version = "4.7.1"
     }
 
     repositories {
