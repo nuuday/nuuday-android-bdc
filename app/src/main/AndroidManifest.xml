@@ -8,6 +8,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:name=".application.ToDoApplication"
         android:theme="@style/AppTheme">
         <activity android:name="nuuday.android.sample.activity.MainActivity">
             <intent-filter>

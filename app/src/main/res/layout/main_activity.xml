@@ -1,32 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/container"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/mainFragment"
-        android:name="nuuday.android.sample.main.MainFragment"
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:id="@+id/container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent">
 
-    <LinearLayout
-        android:id="@+id/splashLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/colorBackground"
-        android:gravity="center"
-        android:visibility="gone">
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/mainFragment"
+            android:name="nuuday.android.sample.main.MainFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/colorLight"
-            android:text="HELLO"
-            android:textSize="16dp"
-            android:textStyle="bold" />
+        <LinearLayout
+            android:id="@+id/splashLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorBackground"
+            android:gravity="center"
+            android:visibility="gone">
 
-    </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorLight"
+                android:text="HELLO"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
 
 
-</FrameLayout>
+    </FrameLayout>
+</layout>
