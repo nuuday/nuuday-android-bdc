@@ -7,7 +7,7 @@ buildscript {
          */
         compile_sdk_version = 29
         target_sdk_version = 29
-        min_sdk_version = 24
+        min_sdk_version = 21
         build_tool_version = "29.0.3"
         compose_version = '1.0.0-alpha02'
 

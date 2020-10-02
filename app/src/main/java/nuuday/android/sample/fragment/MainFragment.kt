@@ -1,4 +1,4 @@
-package nuuday.android.sample.main
+package nuuday.android.sample.fragment
 
 import music.core.composition.fragments.BehaviorDrivenFragment
 import music.core.composition.fragments.behaviors.CreateDatabindingViewBehavior

@@ -9,8 +9,8 @@ android {
 
     defaultConfig {
         applicationId "nuuday.android.bdc"
-        minSdkVersion 21
-        targetSdkVersion 29
+        minSdkVersion rootProject.ext.min_sdk_version
+        targetSdkVersion rootProject.ext.target_sdk_version
         versionCode 1
         versionName "1.0"
 
