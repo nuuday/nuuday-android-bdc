@@ -35,3 +35,7 @@ interface ActivityBehaviour {
     fun onBack(): Boolean = false
 
 }
+
+fun MutableList<ActivityBehaviour>.addAll(vararg activityBehaviors: ActivityBehaviour){
+    addAll(activityBehaviors)
+}

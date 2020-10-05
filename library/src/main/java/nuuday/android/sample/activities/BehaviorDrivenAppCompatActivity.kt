@@ -49,7 +49,7 @@ open class BehaviorDrivenAppCompatActivity : AppCompatActivity(), IBehaviorDrive
     }
 
     override fun onBackPressed() {
-        var doSuperMethodAfterwards = sendOnBack()
+        val doSuperMethodAfterwards = sendOnBack()
         if (doSuperMethodAfterwards)
             super.onBackPressed()
     }

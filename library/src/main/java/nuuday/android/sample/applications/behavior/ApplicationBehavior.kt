@@ -10,3 +10,7 @@ interface ApplicationBehavior {
         // Override in local behavior
     }
 }
+
+fun MutableList<ApplicationBehavior>.addAll(vararg applicationBehaviors: ApplicationBehavior){
+    addAll(applicationBehaviors)
+}

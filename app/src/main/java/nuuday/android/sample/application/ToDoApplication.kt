@@ -3,6 +3,7 @@ package nuuday.android.sample.application
 import music.core.composition.application.BehaviorDrivenApplication
 import nuuday.android.sample.application.behavior.StartDebugStrictModeApplicationBehavior
 import nuuday.android.sample.application.behavior.StartTimberApplicationBehavior
+import nuuday.android.sample.applications.behavior.addAll
 
 /**
  * Has your application class grown into a long and strange list of copy-pasted initializations
@@ -13,7 +14,7 @@ import nuuday.android.sample.application.behavior.StartTimberApplicationBehavior
 class ToDoApplication : BehaviorDrivenApplication() {
 
     init {
-        addBehaviors(
+        behaviours.addAll(
             StartTimberApplicationBehavior(),
             StartDebugStrictModeApplicationBehavior()
         )

@@ -10,23 +10,7 @@ import nuuday.android.sample.activities.behavior.ActivityBehaviour
  */
 interface IBehaviorDrivenActivity {
 
-    val behaviours: ArrayList<ActivityBehaviour>
-
-    fun addBehaviour(activityBehaviour: ActivityBehaviour) {
-        behaviours.add(activityBehaviour)
-    }
-
-    fun addBehaviors(vararg activityBehaviors: ActivityBehaviour) {
-        behaviours.addAll(activityBehaviors)
-    }
-
-    fun clearBehaviours() {
-        behaviours.clear()
-    }
-
-    private fun removeBehaviour(behavior: ActivityBehaviour) {
-        behaviours.remove(behavior)
-    }
+    val behaviours: MutableList<ActivityBehaviour>
 
     fun sendOnCreate(savedInstanceState: Bundle?) {
         behaviours.forEach {
@@ -56,7 +40,6 @@ interface IBehaviorDrivenActivity {
         behaviours.forEach {
             it.onDestroy()
         }
-        clearBehaviours()
     }
 
     fun sendOnStart() {
