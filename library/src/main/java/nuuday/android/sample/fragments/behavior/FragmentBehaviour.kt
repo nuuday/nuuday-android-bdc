@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import nuuday.android.sample.applications.behavior.ApplicationBehavior
 
 interface FragmentBehaviour {
 
@@ -48,4 +49,8 @@ interface FragmentBehaviour {
     fun sendOnViewCreated(view: View, savedInstanceState: Bundle?){
         
     }
+}
+
+fun MutableList<FragmentBehaviour>.addAll(vararg fragmentBehaviours: FragmentBehaviour){
+    addAll(fragmentBehaviours)
 }

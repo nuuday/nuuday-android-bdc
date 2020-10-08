@@ -11,18 +11,6 @@ interface IBehaviorDrivenApplication {
 
     val behaviours: MutableList<ApplicationBehavior>
 
-    fun addBehaviors(vararg applicationBehavior: ApplicationBehavior) {
-        behaviours.addAll(applicationBehavior)
-    }
-
-    fun removeBehavior(applicationBehavior: ApplicationBehavior) {
-        behaviours.remove(applicationBehavior)
-    }
-
-    fun clearBehaviors() {
-        behaviours.clear()
-    }
-
     fun sendOnCreate() {
         behaviours.forEach { it.onCreate() }
     }

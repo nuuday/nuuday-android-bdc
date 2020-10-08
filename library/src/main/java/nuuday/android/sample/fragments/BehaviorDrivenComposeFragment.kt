@@ -9,7 +9,7 @@ import nuuday.android.sample.fragments.behavior.FragmentBehaviour
 
 open class BehaviorDrivenComposeFragment : Fragment(), IBehaviorDrivenFragment {
 
-    override val behaviours: ArrayList<FragmentBehaviour> = ArrayList()
+    override val behaviours = ArrayList<FragmentBehaviour>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

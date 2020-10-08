@@ -8,20 +8,7 @@ import nuuday.android.sample.fragments.behavior.FragmentBehaviour
 
 interface IBehaviorDrivenFragment {
 
-    val behaviours: ArrayList<FragmentBehaviour>
-
-    fun addBehaviour(fragmentBehavior: FragmentBehaviour) {
-        behaviours.add(fragmentBehavior)
-    }
-
-    fun addBehaviors(vararg fragmentBehaviors: FragmentBehaviour) {
-        for (fragmentBehavior in fragmentBehaviors)
-            behaviours.add(fragmentBehavior)
-    }
-
-    fun removeBehaviours() {
-        behaviours.clear()
-    }
+    val behaviours: MutableList<FragmentBehaviour>
 
     fun sendOnCreate(savedInstanceState: Bundle?) {
         behaviours.forEach {
@@ -71,7 +58,6 @@ interface IBehaviorDrivenFragment {
         behaviours.forEach {
             it.onDestroy()
         }
-        removeBehaviours()
     }
 
     fun sendOnStart() {
