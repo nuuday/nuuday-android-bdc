@@ -8,10 +8,6 @@ import nuuday.android.sample.fragments.behavior.addAll
 
 class MainFragment : BehaviorDrivenFragment() {
 
-    companion object {
-        fun newInstance() = MainFragment()
-    }
-
     init {
         behaviours.addAll(
             CreateDatabindingViewBehavior<MainFragmentBinding>(
