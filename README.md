@@ -2,11 +2,11 @@
 Make Your Android App Composable And Get Out Of Base-Class Hell.
 
 ## What is this library about? What's the problem?
-**>All my fragments that inherits from my BaseFragment need to know if they're connected to the internet, wait, except one, but it needs all the other features..**
+>All my fragments need to know if they're connected to the internet, wait, except one, but it needs all the other basic features..
 
-**>Oh well, I'll just inherit from BaseFragment and ignore that part for one component..**
+>Oh well, I'll just make a BaseFragment and ignore the network updates for one component..
 
-**>Alright, now some of my fragments need a feature, but not the others... How in the world do I solve this in a nice way? More inheritance layers?**
+>Alright, now some of my fragments need a feature in BaseFragment, but not the others... How in the world do I solve this in a nice way? More inheritance layers?
 
 If you've ever made a BaseFragment (or another BaseComponent) in your Android project, then a problem like the one above is probably something you've encountered. 
 
