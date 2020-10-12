@@ -2,26 +2,26 @@
 Make Your Android App Composable And Get Out Of Base-Class Hell.
 
 ## What is this library about? What's the problem?
->All my fragments that inherits from my BaseFragment need to know if they're connected to the internet, wait, except one, but it needs all the other features..
+**>All my fragments that inherits from my BaseFragment need to know if they're connected to the internet, wait, except one, but it needs all the other features..**
 
->Oh well, I'll just inherit from BaseFragment and ignore that part for one component..
+**>Oh well, I'll just inherit from BaseFragment and ignore that part for one component..**
 
->Alright, now some of my fragments need a feature, but not the others... How in the world do I solve this in a nice way? More inheritance layers?
+**>Alright, now some of my fragments need a feature, but not the others... How in the world do I solve this in a nice way? More inheritance layers?**
 
 If you've ever made a BaseFragment (or another BaseComponent) in your Android project, then a problem like the one above is probably something you've encountered. 
 
 **So, what is the problem:**
 - Using BaseComponents causes a multitude of problems as your project scales
 - Component code in Android can quickly grow beyond comprehension as more features are added to the component
-- A single Fragment or Activity can often begin to take care of multiple UI responsibilities, that are unconnected, but all needs to be in the same component 
-- An Application object can often grow to take care of a multitude of initializations, twisting your onCreate() function into an unholy mess
+- A single Fragment or Activity can often begin to take care of multiple UI responsibilities, that are unconnected, but which all needs to be in the same component 
+- An Application object can often grow to take care of a multitude of initialization, twisting the onCreate() function into an unholy mess
 
 ## So how does this library solve the issue?
-This library makes your Android components use the principle of composition over inheritance.
+This library makes Android components use the principle of composition over inheritance.
 
 Decouple uncorrelated logic into declared **Behaviors**. Behaviors gets called in order of decleration, with the same lifecycle methods as the parent component.
 
-For example, here's a fragment, close the sample projects MainFragment:
+For example, here's a fragment, close to the sample projects MainFragment:
 
 ```kotlin
 class MainFragment : BehaviorDrivenFragment() {
@@ -37,7 +37,7 @@ class MainFragment : BehaviorDrivenFragment() {
 }
 ```
 
-Every behavior has a single UI responsibility, and each of the behaviors make sense if you interact with the sampel application. 
+Every behavior has a single UI responsibility, and each of the behaviors make sense if you interact with the sample application. 
 
 A Behavior is just a simple Kotlin interface, with methods you can choose to override if you need them:
 
@@ -81,10 +81,12 @@ A small ToDo app is used to illustrate the mechanism of Behavior Driven Componen
 
 ![](design/design_screenshot.png)
 
+The sample uses both a composable application, activity and fragment to illustrate the use of behaviors.
+
 ## I have a component that needs to become behavior driven, but is not in the library?
 If you implement the IBehaviorDrivenComponent interface (IBehaviorDrivenFragment for example), you can hook any native component into a behavior driven architecture.
 
-This way you can start reusing behaviors across DialogFragments, Fragments or other Native toplevel components.
+This way you can start reusing behaviors beyond just Fragments, DialogFragments and well into other Native toplevel components.
 
 License
 -------
