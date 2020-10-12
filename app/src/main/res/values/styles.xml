@@ -7,4 +7,19 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="TextTitle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/brandWhite</item>
+    </style>
+
+    <style name="TextLarge">
+        <item name="android:textSize">26sp</item>
+        <item name="android:textColor">@color/brandWhite</item>
+    </style>
+
+    <style name="TextSmall">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/brandWhite</item>
+    </style>
+    
 </resources>

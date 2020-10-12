@@ -8,4 +8,12 @@
     <color name="colorDark">#282828</color>
     <color name="colorLight">#F4F4F4</color>
     <color name="colorHint">#898989</color>
+
+    <color name="brandBlack">#000000</color>
+    <color name="brandWhite">#FFFFFF</color>
+    <color name="brandDark">#453740</color>
+    <color name="brandBlue">#6e6eff</color>
+    <color name="brandYellow">#FFFA1E</color>
+    <color name="brandGreen">#5bfe60</color>
+
 </resources>

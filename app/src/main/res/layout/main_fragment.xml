@@ -11,22 +11,30 @@
         android:layout_height="match_parent">
 
         <LinearLayout
+            android:padding="@dimen/spacingStandard"
             android:id="@+id/headlineContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:gravity="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
                 android:id="@+id/welcomeHeadline"
+                style="@style/TextSmall"
+                android:textColor="@color/brandWhite"
+                android:gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="WELCOME TO" />
 
             <TextView
                 android:id="@+id/appTitle"
+                style="@style/TextSmall"
+                android:textColor="@color/brandWhite"
+                android:gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="NUUDAY TODO DEMO" />
@@ -34,38 +42,67 @@
             <TextView
                 android:id="@+id/welcomeDescription"
                 android:layout_width="wrap_content"
+                style="@style/TextLarge"
+                android:textColor="@color/brandWhite"
+                android:gravity="center"
                 android:layout_height="wrap_content"
-                android:text="BEHAVIOR\nDRIVEN\nCOMPONENTS\nDEMO" />
+                android:text="ANDROID\nBEHAVIOR\nDRIVEN\nCOMPONENTS\nDEMO" />
 
 
         </LinearLayout>
 
 
-        <RelativeLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/todoFieldContainer"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
+            android:background="@drawable/input_shape"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            android:paddingStart="@dimen/spacingStandard"
+            android:layout_margin="@dimen/spacingStandard"
             app:layout_constraintTop_toBottomOf="@id/headlineContainer">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/addTodoButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_width="52dp"
+                android:padding="8dp"
+                app:srcCompat="@drawable/button_add"
+                android:layout_height="52dp" />
 
             <EditText
                 android:id="@+id/todoInputField"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textColor="@color/brandWhite"
+                android:textColorHint="@color/colorHint"
+                android:hint="WRITE HERE AND PRESS >>"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/addTodoButton"
+                android:background="#00000000"
+                android:textSize="16sp"
+                android:layout_width="0dp"
+                android:layout_height="0dp" />
 
-            <ImageView
-                android:id="@+id/addTodoButton"
-                android:layout_width="52dp"
-                android:layout_height="52dp" />
 
-        </RelativeLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView
             android:id="@+id/visitNuudayButton"
+            style="@style/TextSmall"
+            android:textColor="@color/brandWhite"
+            android:gravity="center"
+            android:text="BROUGHT TO YOU BY NUUDAY (CLICK TO VISIT)"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@drawable/button_shape"
+            android:layout_margin="@dimen/spacingStandard"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
