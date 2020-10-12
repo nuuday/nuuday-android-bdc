@@ -43,7 +43,7 @@ interface FragmentBehaviour {
         return null
     }
 
-    fun sendOnViewCreated(view: View, savedInstanceState: Bundle?){
+    fun onViewCreated(view: View, savedInstanceState: Bundle?){
         
     }
 }

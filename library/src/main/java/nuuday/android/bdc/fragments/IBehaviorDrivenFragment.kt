@@ -38,7 +38,7 @@ interface IBehaviorDrivenFragment {
 
     fun sendOnViewCreated(view: View, savedInstanceState: Bundle?) {
         behaviours.forEach {
-            it.sendOnViewCreated(view, savedInstanceState)
+            it.onViewCreated(view, savedInstanceState)
         }
     }
 
