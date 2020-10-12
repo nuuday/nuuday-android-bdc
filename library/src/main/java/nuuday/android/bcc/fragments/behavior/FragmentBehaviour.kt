@@ -1,10 +1,9 @@
-package nuuday.android.sample.fragments.behavior
+package nuuday.android.bcc.fragments.behavior
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import nuuday.android.sample.applications.behavior.ApplicationBehavior
 
 interface FragmentBehaviour {
 

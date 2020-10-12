@@ -4,7 +4,7 @@ import android.app.Activity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
-import nuuday.android.sample.activities.behavior.ActivityBehaviour
+import nuuday.android.bcc.activities.behavior.ActivityBehaviour
 
 open class SetDatabindingContentViewBehavior<T : ViewDataBinding>(
     private val activity: Activity,

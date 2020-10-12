@@ -1,4 +1,4 @@
-package nuuday.android.sample.applications.behavior
+package nuuday.android.bcc.applications.behavior
 
 interface ApplicationBehavior {
 

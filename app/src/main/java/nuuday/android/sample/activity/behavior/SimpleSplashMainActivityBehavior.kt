@@ -4,9 +4,8 @@ import android.animation.Animator
 import android.app.Activity
 import android.os.Bundle
 import android.view.View
-import android.view.animation.Animation
 import nuuday.android.sample.R
-import nuuday.android.sample.activities.behavior.ActivityBehaviour
+import nuuday.android.bcc.activities.behavior.ActivityBehaviour
 
 class SimpleSplashMainActivityBehavior(
     private val activity: Activity

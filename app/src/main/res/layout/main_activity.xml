@@ -12,7 +12,7 @@
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/mainFragment"
-            android:name="nuuday.android.sample.main.MainFragment"
+            android:name="nuuday.android.sample.fragment.MainFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 

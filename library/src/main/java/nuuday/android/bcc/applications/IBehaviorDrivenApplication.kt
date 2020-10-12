@@ -1,6 +1,6 @@
-package nuuday.android.sample.applications
+package nuuday.android.bcc.applications
 
-import nuuday.android.sample.applications.behavior.ApplicationBehavior
+import nuuday.android.bcc.applications.behavior.ApplicationBehavior
 
 /**
  * If an application component is not supported then extend this interface

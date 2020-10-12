@@ -1,8 +1,8 @@
-package music.core.composition.application
+package nuuday.android.bcc.applications
 
 import android.app.Application
-import nuuday.android.sample.applications.IBehaviorDrivenApplication
-import nuuday.android.sample.applications.behavior.ApplicationBehavior
+import nuuday.android.bcc.applications.IBehaviorDrivenApplication
+import nuuday.android.bcc.applications.behavior.ApplicationBehavior
 
 open class BehaviorDrivenApplication : Application(), IBehaviorDrivenApplication {
 

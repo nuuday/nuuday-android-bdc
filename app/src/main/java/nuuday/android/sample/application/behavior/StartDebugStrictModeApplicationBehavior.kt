@@ -2,7 +2,7 @@ package nuuday.android.sample.application.behavior
 
 import android.os.StrictMode
 import androidx.databinding.library.BuildConfig
-import nuuday.android.sample.applications.behavior.ApplicationBehavior
+import nuuday.android.bcc.applications.behavior.ApplicationBehavior
 
 class StartDebugStrictModeApplicationBehavior : ApplicationBehavior {
 

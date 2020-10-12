@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
-import nuuday.android.sample.fragments.behavior.FragmentBehaviour
+import nuuday.android.bcc.fragments.behavior.FragmentBehaviour
 
 class CreateDatabindingViewBehavior<T : ViewDataBinding>(
     private val fragment: Fragment,

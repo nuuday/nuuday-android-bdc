@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import nuuday.android.sample.fragments.behavior.FragmentBehaviour
+import nuuday.android.bcc.fragments.behavior.FragmentBehaviour
 
 open class BehaviorDrivenFragment : Fragment(), IBehaviorDrivenFragment {
 
