@@ -19,8 +19,8 @@ class SimpleSplashMainActivityBehavior(
         splash
             .animate()
             .alpha(0.0f)
-            .setStartDelay(500)
-            .setDuration(1000)
+            .setStartDelay(1500)
+            .setDuration(500)
             .setListener(object:  Animator.AnimatorListener {
 
                 override fun onAnimationStart(animation: Animator?) {

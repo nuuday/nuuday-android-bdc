@@ -2,14 +2,11 @@ package nuuday.android.sample.fragment
 
 import music.core.composition.fragments.BehaviorDrivenFragment
 import music.core.composition.fragments.behaviors.CreateDatabindingViewBehavior
+import nuuday.android.bcc.fragments.behavior.addAll
 import nuuday.android.sample.R
 import nuuday.android.sample.databinding.MainFragmentBinding
 
 class MainFragment : BehaviorDrivenFragment() {
-
-    companion object {
-        fun newInstance() = MainFragment()
-    }
 
     init {
         behaviours.addAll(

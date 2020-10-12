@@ -11,7 +11,7 @@ import nuuday.android.bcc.activities.behavior.ActivityBehaviour
  */
 open class BehaviorDrivenActivity : Activity(), IBehaviorDrivenActivity {
 
-    override val behaviours: ArrayList<ActivityBehaviour> = ArrayList()
+    override val behaviours: MutableList<ActivityBehaviour> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

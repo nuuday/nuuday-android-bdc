@@ -1,3 +1,7 @@
 package nuuday.android.sample._api
 
-data class ToDo(val index: Int, val text: String)
+data class ToDo(
+    val uid: Int,
+    val index: Int,
+    val text: String
+)

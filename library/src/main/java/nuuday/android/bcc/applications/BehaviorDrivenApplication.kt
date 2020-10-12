@@ -6,7 +6,7 @@ import nuuday.android.bcc.applications.behavior.ApplicationBehavior
 
 open class BehaviorDrivenApplication : Application(), IBehaviorDrivenApplication {
 
-    override val behaviours = arrayListOf<ApplicationBehavior>()
+    override val behaviours: MutableList<ApplicationBehavior> = ArrayList()
 
     override fun onCreate() {
         super.onCreate()

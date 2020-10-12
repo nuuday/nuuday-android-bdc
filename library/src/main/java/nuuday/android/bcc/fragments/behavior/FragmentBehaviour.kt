@@ -35,8 +35,6 @@ interface FragmentBehaviour {
         // Override for onDestroy behavior
     }
 
-    fun onBack(): Boolean = false
-
     fun onCreateViewBehavior(
         inflater: LayoutInflater,
         container: ViewGroup?,

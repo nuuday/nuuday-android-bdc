@@ -9,7 +9,7 @@ import nuuday.android.bcc.fragments.behavior.FragmentBehaviour
 
 open class BehaviorDrivenDialogFragment : DialogFragment(), IBehaviorDrivenFragment {
 
-    override val behaviours = ArrayList<FragmentBehaviour>()
+    override val behaviours: MutableList<FragmentBehaviour> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
