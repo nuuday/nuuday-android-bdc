@@ -1,4 +1,4 @@
-package nuuday.android.bcc.activities.behavior
+package nuuday.android.bdc.activities.behavior
 
 import android.os.Bundle
 

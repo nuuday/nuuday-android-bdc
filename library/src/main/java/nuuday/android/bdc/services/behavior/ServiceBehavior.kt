@@ -1,7 +1,6 @@
-package nuuday.android.bcc.services.behavior
+package nuuday.android.bdc.services.behavior
 
 import android.content.Intent
-import android.os.Bundle
 import android.os.IBinder
 import android.support.v4.media.MediaBrowserCompat
 import androidx.media.MediaBrowserServiceCompat

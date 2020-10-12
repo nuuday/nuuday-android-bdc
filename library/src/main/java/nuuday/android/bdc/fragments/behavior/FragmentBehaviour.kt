@@ -1,4 +1,4 @@
-package nuuday.android.bcc.fragments.behavior
+package nuuday.android.bdc.fragments.behavior
 
 import android.os.Bundle
 import android.view.LayoutInflater
