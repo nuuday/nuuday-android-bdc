@@ -1,4 +1,4 @@
-package nuuday.android.sample._api
+package nuuday.android.sample._api.model
 
 data class ToDo(
     val uid: Int,

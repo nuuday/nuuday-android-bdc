@@ -1,7 +1,7 @@
 package music.core.composition.activities
 
 import android.os.Bundle
-import nuuday.android.bcc.activities.behavior.ActivityBehaviour
+import nuuday.android.bdc.activities.behavior.ActivityBehaviour
 
 /**
  * Any Activity that chooses to be a behavior driven Activity should refrain from using the internal lifecycle methods

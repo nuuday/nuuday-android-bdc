@@ -1,7 +1,7 @@
 package nuuday.android.sample.application
 
-import nuuday.android.bcc.applications.BehaviorDrivenApplication
-import nuuday.android.bcc.applications.behavior.addAll
+import nuuday.android.bdc.applications.BehaviorDrivenApplication
+import nuuday.android.bdc.applications.behavior.addAll
 import nuuday.android.sample.application.behavior.StartDebugStrictModeApplicationBehavior
 import nuuday.android.sample.application.behavior.StartTimberApplicationBehavior
 

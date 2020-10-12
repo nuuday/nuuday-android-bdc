@@ -1,14 +1,33 @@
-package nuuday.android.bcc.services
+package nuuday.android.bdc.services
 
-import android.app.Service
+
 import android.content.Intent
+import android.os.Bundle
 import android.os.IBinder
+import android.support.v4.media.MediaBrowserCompat
+import androidx.media.MediaBrowserServiceCompat
 import music.core.composition.activities.IBehaviorDrivenService
-import nuuday.android.bcc.services.behavior.ServiceBehavior
+import nuuday.android.bdc.services.behavior.ServiceBehavior
 
-open class BehaviorDrivenService : Service(), IBehaviorDrivenService {
+class BehaviorDrivenMediaServiceCompat : MediaBrowserServiceCompat(), IBehaviorDrivenService {
 
     override val behaviours: ArrayList<ServiceBehavior> = ArrayList()
+
+    override fun onGetRoot(
+        clientPackageName: String,
+        clientUid: Int,
+        rootHints: Bundle?
+    ): BrowserRoot? {
+        return sendOnGetRoot()
+    }
+
+    override fun onLoadChildren(
+        parentId: String,
+        result: Result<MutableList<MediaBrowserCompat.MediaItem>>
+    ) {
+        sendOnLoadChildren(parentId, result)
+    }
+
 
     override fun onCreate() {
         super.onCreate()
@@ -23,7 +42,7 @@ open class BehaviorDrivenService : Service(), IBehaviorDrivenService {
     override fun onRebind(intent: Intent?) {
         super.onRebind(intent)
         sendOnRebind(intent)
-   }
+    }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         return sendOnStartCommand(
@@ -41,6 +60,4 @@ open class BehaviorDrivenService : Service(), IBehaviorDrivenService {
     override fun onBind(intent: Intent?): IBinder? {
         return sendOnBind(intent)
     }
-
-
 }

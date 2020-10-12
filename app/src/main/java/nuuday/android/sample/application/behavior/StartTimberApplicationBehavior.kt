@@ -1,7 +1,7 @@
 package nuuday.android.sample.application.behavior
 
 import nuuday.android.sample.BuildConfig
-import nuuday.android.bcc.applications.behavior.ApplicationBehavior
+import nuuday.android.bdc.applications.behavior.ApplicationBehavior
 import timber.log.Timber
 
 class StartTimberApplicationBehavior: ApplicationBehavior {

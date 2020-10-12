@@ -1,15 +1,15 @@
 package music.core.composition.activities
 
+import android.app.Activity
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
-import nuuday.android.bcc.activities.behavior.ActivityBehaviour
+import nuuday.android.bdc.activities.behavior.ActivityBehaviour
 
 /**
  * Any Activity that chooses to be a behavior driven Activity should refrain from using the internal lifecycle methods
  *
  * Instead, extract all behavior into ActivityBehaviors and add them in the init of the activity
  */
-open class BehaviorDrivenAppCompatActivity : AppCompatActivity(), IBehaviorDrivenActivity {
+open class BehaviorDrivenActivity : Activity(), IBehaviorDrivenActivity {
 
     override val behaviours: MutableList<ActivityBehaviour> = ArrayList()
 

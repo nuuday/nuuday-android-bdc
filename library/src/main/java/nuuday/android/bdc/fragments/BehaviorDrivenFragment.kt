@@ -4,10 +4,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.DialogFragment
-import nuuday.android.bcc.fragments.behavior.FragmentBehaviour
+import androidx.fragment.app.Fragment
+import nuuday.android.bdc.fragments.behavior.FragmentBehaviour
 
-open class BehaviorDrivenDialogFragment : DialogFragment(), IBehaviorDrivenFragment {
+open class BehaviorDrivenFragment : Fragment(), IBehaviorDrivenFragment {
 
     override val behaviours: MutableList<FragmentBehaviour> = ArrayList()
 

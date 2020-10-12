@@ -1,13 +1,10 @@
 package music.core.composition.activities
 
 import android.content.Intent
-import android.os.Bundle
 import android.os.IBinder
-import android.service.media.MediaBrowserService
 import android.support.v4.media.MediaBrowserCompat
 import androidx.media.MediaBrowserServiceCompat
-import nuuday.android.bcc.activities.behavior.ActivityBehaviour
-import nuuday.android.bcc.services.behavior.ServiceBehavior
+import nuuday.android.bdc.services.behavior.ServiceBehavior
 
 /**
  * Any Activity that chooses to be a behavior driven Activity should refrain from using the internal lifecycle methods

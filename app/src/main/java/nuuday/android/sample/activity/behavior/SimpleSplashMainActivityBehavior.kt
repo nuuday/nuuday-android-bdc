@@ -5,7 +5,7 @@ import android.app.Activity
 import android.os.Bundle
 import android.view.View
 import nuuday.android.sample.R
-import nuuday.android.bcc.activities.behavior.ActivityBehaviour
+import nuuday.android.bdc.activities.behavior.ActivityBehaviour
 
 class SimpleSplashMainActivityBehavior(
     private val activity: Activity

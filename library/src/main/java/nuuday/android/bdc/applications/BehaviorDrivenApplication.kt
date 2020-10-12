@@ -1,8 +1,7 @@
-package nuuday.android.bcc.applications
+package nuuday.android.bdc.applications
 
 import android.app.Application
-import nuuday.android.bcc.applications.IBehaviorDrivenApplication
-import nuuday.android.bcc.applications.behavior.ApplicationBehavior
+import nuuday.android.bdc.applications.behavior.ApplicationBehavior
 
 open class BehaviorDrivenApplication : Application(), IBehaviorDrivenApplication {
 
