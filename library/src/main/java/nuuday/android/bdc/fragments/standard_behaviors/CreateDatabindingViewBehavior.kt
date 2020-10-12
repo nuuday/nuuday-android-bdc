@@ -1,4 +1,4 @@
-package music.core.composition.fragments.behaviors
+package nuuday.android.bdc.fragments.standard_behaviors
 
 import android.os.Bundle
 import android.view.LayoutInflater

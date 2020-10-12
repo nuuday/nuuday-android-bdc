@@ -1,4 +1,4 @@
-package music.core.composition.fragments
+package nuuday.android.bdc.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater

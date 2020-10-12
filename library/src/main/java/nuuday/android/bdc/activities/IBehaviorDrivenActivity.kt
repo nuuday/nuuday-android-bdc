@@ -1,4 +1,4 @@
-package music.core.composition.activities
+package nuuday.android.bdc.activities
 
 import android.os.Bundle
 import nuuday.android.bdc.activities.behavior.ActivityBehaviour
