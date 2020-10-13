@@ -31,7 +31,7 @@
 
             <TextView
                 android:id="@+id/welcomeHeadline"
-                style="@style/TextSmall"
+                style="@style/TextMedium"
                 android:textColor="@color/brandWhite"
                 android:gravity="center"
                 android:layout_width="wrap_content"
@@ -40,9 +40,10 @@
 
             <TextView
                 android:id="@+id/appTitle"
-                style="@style/TextSmall"
+                style="@style/TextMedium"
                 android:textColor="@color/brandWhite"
                 android:gravity="center"
+                android:paddingTop="@dimen/spacingSmall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="NUUDAY TODO DEMO" />
@@ -53,6 +54,7 @@
                 style="@style/TextLarge"
                 android:textColor="@color/brandWhite"
                 android:gravity="center"
+                android:paddingTop="@dimen/spacingSmall"
                 android:layout_height="wrap_content"
                 android:text="ANDROID\nBEHAVIOR\nDRIVEN\nCOMPONENTS\nDEMO" />
 
@@ -88,14 +90,14 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 android:text="@={viewModel.input}"
-                android:textColor="@color/brandWhite"
+                style="@style/TextMedium"
                 android:textColorHint="@color/colorHint"
-                android:hint="WRITE HERE AND PRESS >>"
+                android:singleLine="true"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/addTodoButton"
                 android:background="#00000000"
-                android:textSize="16sp"
                 android:layout_width="0dp"
+                android:imeOptions="actionDone"
                 android:layout_height="0dp" />
 
 

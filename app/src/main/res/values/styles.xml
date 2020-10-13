@@ -9,16 +9,25 @@
 
     <style name="TextTitle">
         <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">@font/nuu_bold</item>
         <item name="android:textColor">@color/brandWhite</item>
     </style>
 
     <style name="TextLarge">
         <item name="android:textSize">26sp</item>
+        <item name="android:fontFamily">@font/nuu_regular</item>
         <item name="android:textColor">@color/brandWhite</item>
     </style>
 
     <style name="TextSmall">
         <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/nuu_light</item>
+        <item name="android:textColor">@color/brandWhite</item>
+    </style>
+
+    <style name="TextMedium">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/nuu_regular</item>
         <item name="android:textColor">@color/brandWhite</item>
     </style>
     

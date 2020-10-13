@@ -3,17 +3,17 @@ package nuuday.android.sample.fragment.behavior
 import android.animation.ValueAnimator
 import android.os.Bundle
 import android.view.View
-import android.view.animation.AccelerateDecelerateInterpolator
 import android.view.animation.DecelerateInterpolator
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import nuuday.android.bdc.fragments.behavior.FragmentBehaviour
+import nuuday.android.sample.R
 import nuuday.android.sample.databinding.MainFragmentBinding
 import nuuday.android.sample.fragment.MainViewModel
 
 
-class ControlWelcomeTextFragmentBehavior(
+class ControlHeadlineTextAnimationsFragmentBehavior(
     private val fragment: Fragment
 ) : FragmentBehaviour {
 
@@ -30,17 +30,35 @@ class ControlWelcomeTextFragmentBehavior(
 
         viewModel.todos.observe(fragment, { list ->
 
-            if(initialHeightWelcomeHeadline == null){
-                initialHeightWelcomeHeadline = mainBinding.welcomeHeadline.layoutParams.height
-                initialHeightDescriptionHeadline = mainBinding.welcomeDescription.layoutParams.height
+            // Only grab the values if we dont ahve them and the view is drawn (height > 0)
+            if (initialHeightWelcomeHeadline == null
+                && mainBinding.welcomeHeadline.height > 0
+            ) {
+                initialHeightWelcomeHeadline = mainBinding.welcomeHeadline.height
+                initialHeightDescriptionHeadline =
+                    mainBinding.welcomeDescription.height
             }
 
             if (list.size == 1) {
+                mainBinding.todoText.hint = fragment.getString(R.string.hint_not_empty)
                 collapse(mainBinding.welcomeHeadline, 1000, 0)
                 collapse(mainBinding.welcomeDescription, 1000, 0)
             } else if (list.isEmpty()) {
-                expand(mainBinding.welcomeHeadline, 1000, initialHeightWelcomeHeadline!!)
-                expand(mainBinding.welcomeDescription, 1000, initialHeightDescriptionHeadline!!)
+                mainBinding.todoText.hint = fragment.getString(R.string.hint_empty)
+                initialHeightWelcomeHeadline?.let {
+                    expand(
+                        mainBinding.welcomeHeadline,
+                        1000,
+                        it
+                    )
+                }
+                initialHeightDescriptionHeadline?.let {
+                    expand(
+                        mainBinding.welcomeDescription,
+                        1000,
+                        it
+                    )
+                }
             }
         })
     }

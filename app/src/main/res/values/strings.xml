@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">BehaviorDrivenComponents</string>
+    <string name="hint_empty">"Write here and press >>"</string>
+    <string name="hint_not_empty">"Write ToDo.."</string>
 </resources>

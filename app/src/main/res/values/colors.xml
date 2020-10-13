@@ -16,4 +16,9 @@
     <color name="brandYellow">#FFFA1E</color>
     <color name="brandGreen">#5bfe60</color>
 
+
+    <color name="brandBlueTransparent">#406e6eff</color>
+    <color name="brandYellowTransparent">#40FFFA1E</color>
+    <color name="brandGreenTransparent">#405bfe60</color>
+
 </resources>
