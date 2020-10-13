@@ -1,6 +1,6 @@
 package nuuday.android.sample._api.usecase
 
-import nuuday.android.sample._api.ToDoRepository
+import nuuday.android.sample._api.repository.ToDoRepository
 
 class AddToDoUsecase(
     private val repository: ToDoRepository

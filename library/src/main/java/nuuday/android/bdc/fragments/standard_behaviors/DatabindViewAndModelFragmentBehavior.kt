@@ -9,10 +9,9 @@ import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
 import nuuday.android.bdc.fragments.behavior.FragmentBehaviour
 
-class CreateDatabindingViewBehavior<T : ViewDataBinding>(
+abstract class DatabindViewAndModelFragmentBehavior<T : ViewDataBinding>(
     private val fragment: Fragment,
     private val contentLayoutId: Int,
-    private val bindingExecutor: IBindingExecutor<T>? = null,
     private val executePendingBindings: Boolean = false
 ) : FragmentBehaviour {
 
@@ -31,7 +30,7 @@ class CreateDatabindingViewBehavior<T : ViewDataBinding>(
             false
         ).also {
             it.lifecycleOwner = fragment.viewLifecycleOwner
-            bindingExecutor?.applyToBinding(it)
+            applyToBindings(it)
         }
 
         if (executePendingBindings)
@@ -39,4 +38,6 @@ class CreateDatabindingViewBehavior<T : ViewDataBinding>(
 
         return binding.root
     }
+
+    abstract fun applyToBindings(binding: T)
 }

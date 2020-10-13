@@ -1,4 +1,4 @@
-package nuuday.android.sample._api
+package nuuday.android.sample._api.repository
 
 import nuuday.android.sample._api.model.ToDo
 

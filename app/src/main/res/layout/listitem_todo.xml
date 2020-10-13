@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/todoFieldContainer"
+        android:layout_width="match_parent"
+        android:background="@drawable/list_shape"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/spacingStandard"
+        android:layout_marginStart="@dimen/spacingStandard"
+        android:layout_marginEnd="@dimen/spacingStandard"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/spacingSmall"
+        android:layout_marginBottom="@dimen/spacingSmall"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/headlineContainer">
+
+        <TextView
+            android:id="@+id/todoText"
+            android:textColor="@color/brandWhite"
+            app:layout_constraintEnd_toStartOf="@id/doneWithTodoButton"
+            android:textSize="16sp"
+            android:layout_width="match_parent"
+            android:paddingEnd="@dimen/spacingStandard"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/doneWithTodoButton"
+            android:layout_width="52dp"
+            android:padding="8dp"
+            app:srcCompat="@drawable/button_done"
+            android:layout_height="52dp" />
+
+
+    </LinearLayout>
+</layout>

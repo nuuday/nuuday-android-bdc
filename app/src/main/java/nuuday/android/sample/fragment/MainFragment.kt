@@ -1,19 +1,21 @@
 package nuuday.android.sample.fragment
 
 import nuuday.android.bdc.fragments.BehaviorDrivenFragment
-import nuuday.android.bdc.fragments.standard_behaviors.CreateDatabindingViewBehavior
 import nuuday.android.bdc.fragments.behavior.addAll
-import nuuday.android.sample.R
 import nuuday.android.sample.databinding.MainFragmentBinding
+import nuuday.android.sample.fragment.behavior.ControlWelcomeTextFragmentBehavior
+import nuuday.android.sample.fragment.behavior.NavigateToNuudayFragmentBehavior
+import nuuday.android.sample.fragment.behavior.SetMainViewAndViewModelFragmentBehavior
+import nuuday.android.sample.fragment.behavior.ToDoListFragmentBehavior
 
 class MainFragment : BehaviorDrivenFragment() {
 
     init {
         behaviours.addAll(
-            CreateDatabindingViewBehavior<MainFragmentBinding>(
-                fragment = this,
-                contentLayoutId = R.layout.main_fragment
-            )
+            SetMainViewAndViewModelFragmentBehavior<MainFragmentBinding>(fragment = this),
+            ControlWelcomeTextFragmentBehavior(this),
+            ToDoListFragmentBehavior(this),
+            NavigateToNuudayFragmentBehavior(this)
         )
     }
 
