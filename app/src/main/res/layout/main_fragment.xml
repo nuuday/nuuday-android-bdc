@@ -56,7 +56,7 @@
                 android:gravity="center"
                 android:paddingTop="@dimen/spacingSmall"
                 android:layout_height="wrap_content"
-                android:text="ANDROID\nBEHAVIOR\nDRIVEN\nCOMPONENTS\nDEMO" />
+                android:text="USING\nBEHAVIOR\nDRIVEN\nCOMPONENTS" />
 
 
         </LinearLayout>
