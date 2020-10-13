@@ -1,25 +1,27 @@
 # Behavior Driven Components For Android by Nuuday
-Make Your Android App Composable And Get Out Of Base-Class Hell.
+ Decouple Your Android Component Logic And Get Out Of Base-Class Hell.
 
 ## What is this library about? What's the problem?
->All my fragments need to know if they're connected to the internet, wait, except one, but it needs all the other basic features..
+>All my fragments need to track if they are opened, wait, except maybe one..
 
->Oh well, I'll just make a BaseFragment and ignore the network updates for one component..
+>Oh well, I'll just make a BaseFragment with tracking and ignore it in that one component..
 
->Alright, now some of my fragments need a feature in BaseFragment, but not the others... How in the world do I solve this in a nice way? More inheritance layers?
+>Alright, but now some of my fragments need another feature in BaseFragment, but not others... 
+
+>How in the world do I solve this in a nice way? More inheritance layers?
 
 If you've ever made a BaseFragment (or another BaseComponent) in your Android project, then a problem like the one above is probably something you've encountered. 
 
 **So, what is the problem:**
 - Using BaseComponents causes a multitude of problems as your project scales
 - Component code in Android can quickly grow beyond comprehension as more features are added to the component
-- A single Fragment or Activity can often begin to take care of multiple UI responsibilities, that are unconnected, but which all needs to be in the same component 
-- An Application object can often grow to take care of a multitude of initialization, twisting the onCreate() function into an unholy mess
+- A single Fragment or Activity can often begin to take care of many UI responsibilities, that are unconnected, but which all needs to live in the same component 
+- An Application object can often grow to take care of a range of initialization, twisting the onCreate() function into an unholy mess
 
 ## So how does this library solve the issue?
-This library makes Android components use the principle of composition over inheritance.
+This library makes Android components use the principle of [composition ](https://en.wikipedia.org/wiki/Composition_over_inheritance)[over ](https://www.youtube.com/watch?v=wfMtDGfHWpA)[inheritance](https://stackoverflow.com/questions/49002/prefer-composition-over-inheritance). 
 
-Decouple uncorrelated logic into declared **Behaviors**. Behaviors gets called in order of decleration, with the same lifecycle methods as the parent component.
+Decouple uncorrelated logic into declared **Behaviors**. Behaviors gets called in order of declaration, with the same lifecycle methods as the parent component.
 
 For example, here's a fragment, close to the sample projects MainFragment:
 
@@ -30,16 +32,16 @@ class MainFragment : BehaviorDrivenFragment() {
         behaviours.addAll(
             CreateDatabindingViewFragmentBehavior(..),
             InitiateWelcomeTextFragmentBehavior(..),
-            CollapseTextOnInitalTodosFragmentBehavior(..)
+            CollapseTextOnInitialTodosFragmentBehavior(..)
         )
     }
     
 }
 ```
 
-Every behavior has a single UI responsibility, and each of the behaviors make sense if you interact with the sample application. 
+Every behavior has a single UI responsibility, and each of the behaviors make sense in themselves if you interact with the sample application. 
 
-A Behavior is just a simple Kotlin interface, with methods you can choose to override if you need them:
+A Behavior is just a simple Kotlin interface, that is hooked into the same lifecycle as its parent, with methods you can choose to override if you need them. Just like  regular component:
 
 ```kotlin
 interface FragmentBehaviour {
@@ -86,7 +88,7 @@ The sample uses both a composable application, activity and fragment to illustra
 ## I have a component that needs to become behavior driven, but is not in the library?
 If you implement the IBehaviorDrivenComponent interface (IBehaviorDrivenFragment for example), you can hook any native component into a behavior driven architecture.
 
-This way you can start reusing behaviors beyond just Fragments, DialogFragments and well into other Native toplevel components.
+This way you can start using behavior driven architecture on all native toplevel components.
 
 License
 -------
