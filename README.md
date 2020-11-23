@@ -3,20 +3,21 @@
 Decouple Your Android Component Logic Through Behaviors And Get Out Of Base-Class Hell.
 
 ## What is this library about? What's the problem?
->All my fragments need to track if they are opened for user insight purposes, wait, except maybe one..
+Imagine all your fragments need to be able to do "A" (you call this class "BaseFragment"). As time goes on, most of your fragments need to do "B", and some need to do "C".
 
->Oh well, I'll just make a BaseFragment with tracking, make my fragments inherit from it, and ignore tracking in one component..
+Then, the product evolves and you want a fragment that is able to do "B"+"C" **but NOT "A"**.
 
->Alright, but now some of my fragments inheriting BaseFragment needs a shared feature, but not others... 
+If you used inheritance, you are now stuck. "C" came from "B" which came from "A". Do you now create a "B" fragment with duplicated behavior from "A"?
 
->How in the world do I solve this in a nice way? More inheritance layers?
+Inheritance can cause a multitude of problems, many well described through:
+- [The wikipedia entry on Composition Over Inheritance](https://en.wikipedia.org/wiki/Composition_over_inheritance)
+- [A great video on the subject by Fun Fun Function](https://www.youtube.com/watch?v=wfMtDGfHWpA)
+- [The open discussion on Stack Overflow](https://stackoverflow.com/questions/49002/prefer-composition-over-inheritance)
 
-If you've ever made a BaseFragment (or another BaseComponent), then a problem like the one above is probably something you've encountered. 
-
-**So, what is the problem:**
-- Using BaseComponent inheritance causes a multitude of problems as your project gains more complexity
-- A single Fragment or Activity can often begin to take care of many UI responsibilities, that are functionally separate, but which all needs to live in the same component 
-- An Application class often grows to take care of a range of initialization, twisting the onCreate() function into an unholy mess
+Some of the general symptoms of missing composition in Android Components are:
+- A Fragment or Activity begins to take care of many UI responsibilities, that are not related, but which all needs to live in the same component, causing bloat
+- An Application class often grows to take care of a range of initialization, twisting the onCreate() function into a long mess
+- Duplication of logic across BaseClasses and/or switches introduced to the BaseClasses, controlling if internal functionality is turned on/off
 
 ## So how does this library solve the issue?
 This library makes Android components use the principle of [composition ](https://en.wikipedia.org/wiki/Composition_over_inheritance)[over ](https://www.youtube.com/watch?v=wfMtDGfHWpA)[inheritance](https://stackoverflow.com/questions/49002/prefer-composition-over-inheritance). 
