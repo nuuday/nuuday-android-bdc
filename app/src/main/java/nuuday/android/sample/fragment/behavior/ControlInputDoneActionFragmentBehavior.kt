@@ -21,7 +21,7 @@ class ControlInputDoneActionFragmentBehavior(
 
         val viewModel = ViewModelProviders.of(fragment).get(MainViewModel::class.java)
 
-        mainBinding.todoText.setOnEditorActionListener { v, actionId, event ->
+        mainBinding.todoText.setOnEditorActionListener { _, _, _ ->
             viewModel.addTodo()
             true
         }

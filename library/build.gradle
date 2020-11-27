@@ -55,12 +55,11 @@ dependencies {
      *          ANDROID UI EXTRAS
      */
     implementation "androidx.recyclerview:recyclerview:$androidx_recyclerview_version"
-    implementation "androidx.cardview:cardview:$androidx_cardview_version"
     implementation "androidx.lifecycle:lifecycle-extensions:$androidx_lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$androidx_lifecycle_version"
     implementation "androidx.constraintlayout:constraintlayout:$androidx_contraintlayout_version"
-    // this is needed for Android Q: https://stackoverflow.com/questions/58145382/android-10-q-transition-shared-element-view-in-fragment-with-recyclerview-is-b
-    implementation "androidx.transition:transition:$transition_version"
-    implementation "androidx.coordinatorlayout:coordinatorlayout:$coordinatorlayout"
+
+
+    implementation "com.google.android.material:material:$material_version"
     implementation "androidx.media:media:$androidx_media_version"
 }
