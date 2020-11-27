@@ -29,11 +29,6 @@ Inheritance can cause a multitude of problems, many well described through:
 - [A great video on the subject by Fun Fun Function](https://www.youtube.com/watch?v=wfMtDGfHWpA)
 - [The open discussion on Stack Overflow](https://stackoverflow.com/questions/49002/prefer-composition-over-inheritance)
 
-Some of the general symptoms of missing composition in Android Components are:
-- A Fragment or Activity begins to take care of many UI responsibilities, that are not related, but which all needs to live in the same component, causing bloat
-- An Application class often grows to take care of a range of initialization, twisting the onCreate() function into a long mess
-- Duplication of logic across BaseClasses and/or switches introduced to the BaseClasses, controlling if internal functionality is turned on/off
-
 ## So how does this library solve the issue?
 This library makes Android components use the principle of [composition ](https://en.wikipedia.org/wiki/Composition_over_inheritance)[over ](https://www.youtube.com/watch?v=wfMtDGfHWpA)[inheritance](https://stackoverflow.com/questions/49002/prefer-composition-over-inheritance). 
 
