@@ -1,6 +1,21 @@
 # Behavior Driven Components For Android 
 #### by [Nuuday](https://nuuday.com/?_ga=2.177655397.1522986134.1602592361-2052711778.1601640763&_gac=1.49031508.1601640763.CjwKCAjwn9v7BRBqEiwAbq1Ey9n3yaRxy73jAPy5bQ1DTgcIDYxJjT1S-cZyIdgQL_I7qn3r5inSKxoCFxUQAvD_BwE)
-Decouple Your Android Component Logic Through Behaviors And Get Out Of Base-Class Hell.
+Decouple Your Component Logic Through Behaviors And Get Out Of BaseClass Hell.
+
+## How to get it
+Published through jitpack, so add this to your project level gradle file:
+```
+allprojects {
+    repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+And use this in your module level gradle files:
+```
+implementation 'com.github.nuuday:nuuday-android-bdc:1.0.0'
+```
 
 ## What is this library about? What's the problem?
 Imagine all your fragments need to be able to do "A" (you call this class "BaseFragment"). As time goes on, most of your fragments need to do "B", and some need to do "C".
