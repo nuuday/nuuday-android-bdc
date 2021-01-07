@@ -1,5 +1,6 @@
 package nuuday.android.bdc.fragments
 
+import android.app.Dialog
 import android.os.Bundle
 import android.view.*
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
@@ -60,5 +61,11 @@ open class BehaviorDrivenBottomSheetDialogFragment : BottomSheetDialogFragment()
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
         sendOnCreateOptionsMenu(menu, inflater)
+    }
+
+    override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
+        val dialog =  super.onCreateDialog(savedInstanceState)
+        sendOnDialogCreated(dialog, savedInstanceState)
+        return dialog
     }
 }

@@ -1,5 +1,6 @@
 package nuuday.android.bdc.fragments.behavior
 
+import android.app.Dialog
 import android.os.Bundle
 import android.view.*
 
@@ -49,7 +50,9 @@ interface FragmentBehaviour {
         // Override for onCreateOptionsMenu behavior
     }
 
-
+    fun onDialogCreated(dialog: Dialog, savedInstanceState: Bundle?){
+        // Override for onCreateDialog behavior ONLY in DialogFragments (otherwise it wont be called)
+    }
 }
 
 fun MutableList<FragmentBehaviour>.addAll(vararg fragmentBehaviours: FragmentBehaviour){

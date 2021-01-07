@@ -1,5 +1,6 @@
 package nuuday.android.bdc.fragments
 
+import android.app.Dialog
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.DialogFragment
@@ -61,5 +62,11 @@ open class BehaviorDrivenDialogFragment : DialogFragment(), IBehaviorDrivenFragm
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
         sendOnCreateOptionsMenu(menu, inflater)
+    }
+
+    override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
+        val dialog =  super.onCreateDialog(savedInstanceState)
+        sendOnDialogCreated(dialog, savedInstanceState)
+        return dialog
     }
 }

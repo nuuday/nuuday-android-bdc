@@ -1,5 +1,6 @@
 package nuuday.android.bdc.fragments
 
+import android.app.Dialog
 import android.os.Bundle
 import android.view.*
 import nuuday.android.bdc.fragments.behavior.FragmentBehaviour
@@ -74,5 +75,11 @@ interface IBehaviorDrivenFragment {
          behaviours.forEach {
              it.onCreateOptionsMenu(menu, inflater)
          }
-     }
+    }
+
+    fun sendOnDialogCreated(dialog: Dialog, savedInstanceState: Bundle?) {
+        behaviours.forEach {
+            it.onDialogCreated(dialog, savedInstanceState)
+        }
+    }
 }
