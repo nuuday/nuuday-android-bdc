@@ -1,6 +1,21 @@
 # Behavior Driven Components For Android 
 #### by [Nuuday](https://nuuday.com/?_ga=2.177655397.1522986134.1602592361-2052711778.1601640763&_gac=1.49031508.1601640763.CjwKCAjwn9v7BRBqEiwAbq1Ey9n3yaRxy73jAPy5bQ1DTgcIDYxJjT1S-cZyIdgQL_I7qn3r5inSKxoCFxUQAvD_BwE)
-Decouple Your Android Component Logic Through Behaviors And Get Out Of Base-Class Hell.
+Decouple Your Component Logic Through Behaviors And Get Out Of BaseClass Hell.
+
+## How to get it
+Published through jitpack, so add this to your project level gradle file:
+```
+allprojects {
+    repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+And use this in your module level gradle files:
+```
+implementation 'com.github.nuuday:nuuday-android-bdc:1.0.0'
+```
 
 ## What is this library about? What's the problem?
 Imagine all your fragments need to be able to do "A" (you call this class "BaseFragment"). As time goes on, most of your fragments need to do "B", and some need to do "C".
@@ -13,11 +28,6 @@ Inheritance can cause a multitude of problems, many well described through:
 - [The wikipedia entry on Composition Over Inheritance](https://en.wikipedia.org/wiki/Composition_over_inheritance)
 - [A great video on the subject by Fun Fun Function](https://www.youtube.com/watch?v=wfMtDGfHWpA)
 - [The open discussion on Stack Overflow](https://stackoverflow.com/questions/49002/prefer-composition-over-inheritance)
-
-Some of the general symptoms of missing composition in Android Components are:
-- A Fragment or Activity begins to take care of many UI responsibilities, that are not related, but which all needs to live in the same component, causing bloat
-- An Application class often grows to take care of a range of initialization, twisting the onCreate() function into a long mess
-- Duplication of logic across BaseClasses and/or switches introduced to the BaseClasses, controlling if internal functionality is turned on/off
 
 ## So how does this library solve the issue?
 This library makes Android components use the principle of [composition ](https://en.wikipedia.org/wiki/Composition_over_inheritance)[over ](https://www.youtube.com/watch?v=wfMtDGfHWpA)[inheritance](https://stackoverflow.com/questions/49002/prefer-composition-over-inheritance). 
