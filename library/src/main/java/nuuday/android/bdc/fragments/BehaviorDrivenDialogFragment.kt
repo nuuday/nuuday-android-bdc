@@ -1,9 +1,7 @@
 package nuuday.android.bdc.fragments
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import androidx.fragment.app.DialogFragment
 import nuuday.android.bdc.fragments.IBehaviorDrivenFragment
 import nuuday.android.bdc.fragments.behavior.FragmentBehaviour
@@ -58,5 +56,10 @@ open class BehaviorDrivenDialogFragment : DialogFragment(), IBehaviorDrivenFragm
     override fun onStop() {
         super.onStop()
         sendOnStop()
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        sendOnCreateOptionsMenu(menu, inflater)
     }
 }

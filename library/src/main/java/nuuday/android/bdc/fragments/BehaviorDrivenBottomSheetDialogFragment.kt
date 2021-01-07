@@ -1,9 +1,7 @@
 package nuuday.android.bdc.fragments
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import nuuday.android.bdc.fragments.behavior.FragmentBehaviour
 
@@ -57,5 +55,10 @@ open class BehaviorDrivenBottomSheetDialogFragment : BottomSheetDialogFragment()
     override fun onStop() {
         super.onStop()
         sendOnStop()
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        sendOnCreateOptionsMenu(menu, inflater)
     }
 }

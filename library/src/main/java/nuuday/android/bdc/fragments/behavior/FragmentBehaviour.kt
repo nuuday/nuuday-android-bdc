@@ -1,9 +1,7 @@
 package nuuday.android.bdc.fragments.behavior
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 
 interface FragmentBehaviour {
 
@@ -44,8 +42,14 @@ interface FragmentBehaviour {
     }
 
     fun onViewCreated(view: View, savedInstanceState: Bundle?){
-        
+        // Override for onViewCreated behavior
     }
+
+    fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        // Override for onCreateOptionsMenu behavior
+    }
+
+
 }
 
 fun MutableList<FragmentBehaviour>.addAll(vararg fragmentBehaviours: FragmentBehaviour){

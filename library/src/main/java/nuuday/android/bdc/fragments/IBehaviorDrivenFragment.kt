@@ -1,9 +1,7 @@
 package nuuday.android.bdc.fragments
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import nuuday.android.bdc.fragments.behavior.FragmentBehaviour
 
 interface IBehaviorDrivenFragment {
@@ -71,4 +69,10 @@ interface IBehaviorDrivenFragment {
             it.onStop()
         }
     }
+
+    fun sendOnCreateOptionsMenu(menu: Menu, inflater: MenuInflater){
+         behaviours.forEach {
+             it.onCreateOptionsMenu(menu, inflater)
+         }
+     }
 }
