@@ -48,6 +48,11 @@ open class BehaviorDrivenAppCompatActivity : AppCompatActivity(), IBehaviorDrive
         sendOnStop()
     }
 
+    override fun finish() {
+        super.finish()
+        sendOnFinish()
+    }
+
     override fun onBackPressed() {
         val doSuperMethodAfterwards = sendOnBack()
         if (doSuperMethodAfterwards)

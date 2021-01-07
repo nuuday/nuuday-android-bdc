@@ -54,6 +54,13 @@ interface IBehaviorDrivenActivity {
         }
     }
 
+    fun sendOnFinish() {
+        behaviours.forEach {
+            it.onFinish()
+        }
+    }
+
+
     /**
      * returns false if the back should be consumed by behaviors
      * and not propegate after

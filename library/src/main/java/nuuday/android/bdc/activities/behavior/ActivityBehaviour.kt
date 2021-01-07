@@ -32,6 +32,10 @@ interface ActivityBehaviour {
         // Override for onDestroy behavior
     }
 
+    fun onFinish(){
+        // Override for onFinish behavior
+    }
+
     fun onBack(): Boolean = false
 
 }

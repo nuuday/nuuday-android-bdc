@@ -48,6 +48,11 @@ open class BehaviorDrivenActivity : Activity(), IBehaviorDrivenActivity {
         sendOnStop()
     }
 
+    override fun finish() {
+        super.finish()
+        sendOnFinish()
+    }
+
     override fun onBackPressed() {
         val doSuperMethodAfterwards = sendOnBack()
         if (doSuperMethodAfterwards)
