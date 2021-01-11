@@ -27,7 +27,6 @@ android {
     // Enable data binding in your Android project gradle
     buildFeatures {
         dataBinding = true
-        compose true
     }
 
     compileOptions {
@@ -37,12 +36,7 @@ android {
 
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_1_8.toString()
-        useIR = true
-    }
 
-    composeOptions {
-        kotlinCompilerExtensionVersion compose_version
-        kotlinCompilerVersion kotlin_version
     }
 }
 
@@ -68,10 +62,6 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$androidx_lifecycle_version"
     implementation "androidx.constraintlayout:constraintlayout:$androidx_contraintlayout_version"
 
-    implementation "androidx.compose.ui:ui:$compose_version"
-    implementation "androidx.ui:ui-tooling:$compose_version"
-    implementation "androidx.compose.material:material:$compose_version"
-    implementation "androidx.compose.runtime:runtime:$compose_version"
 
     /**
      *          LOGGING
